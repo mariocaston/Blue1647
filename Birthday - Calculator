@@ -1,0 +1,13 @@
+function getAge(birthMonth, birthDay, birthYear) {
+    var today = new Date();
+    var ageYear = today.getFullYear() - birthYear;
+    var ageMonth = today.getMonth() - birthMonth;
+  
+    if (ageMonth < 0 || (ageMonth === 0  && today.getDate() < birthDay)) {
+        ageYear--;
+    }
+  
+    console.log(ageYear);
+}
+
+getAge(4, 3, 1988);
